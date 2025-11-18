@@ -1,6 +1,6 @@
 public class Circle extends Shape {
 
-    private double radius;
+    private final double radius;
 
     public Circle(double radius) {
         if (radius <= 0) {
@@ -35,4 +35,5 @@ public class Circle extends Shape {
             System.out.println("Error: Radius cannot be zero or negative.");
         }
     }
+
 }
