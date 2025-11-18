@@ -19,7 +19,7 @@ public class GraphicsEditorDemo {
                 case 1 -> createCircle(scanner, shapeCollection);
                 case 2 -> createRectangle(scanner, shapeCollection);
                 case 3 -> createTriangle(scanner, shapeCollection);
-                case 4 -> createEllipse(scanner, shapeCollection); // Новый пункт меню для эллипса
+                case 4 -> createEllipse(scanner, shapeCollection); 
                 case 5 -> shapeCollection.showAllShapes();
                 case 6 -> {
                     System.out.println("Exiting program...");
@@ -31,14 +31,12 @@ public class GraphicsEditorDemo {
         }
     }
 
-    // Метод для добавления круга
     private static void createCircle(Scanner scanner, ShapeCollection shapeCollection) {
         double radius = readPositiveDouble(scanner, "Enter radius: ");
         shapeCollection.addShape(new Circle(radius));
         System.out.println("Circle added successfully!");
     }
 
-    // Метод для добавления прямоугольника
     private static void createRectangle(Scanner scanner, ShapeCollection shapeCollection) {
         double width = readPositiveDouble(scanner, "Enter width: ");
         double height = readPositiveDouble(scanner, "Enter height: ");
@@ -46,7 +44,6 @@ public class GraphicsEditorDemo {
         System.out.println("Rectangle added successfully!");
     }
 
-    // Метод для добавления треугольника
     private static void createTriangle(Scanner scanner, ShapeCollection shapeCollection) {
         double base = readPositiveDouble(scanner, "Enter base: ");
         double height = readPositiveDouble(scanner, "Enter height: ");
@@ -54,7 +51,6 @@ public class GraphicsEditorDemo {
         System.out.println("Triangle added successfully!");
     }
 
-    // Метод для добавления эллипса
     private static void createEllipse(Scanner scanner, ShapeCollection shapeCollection) {
         double majorAxis = readPositiveDouble(scanner, "Enter major axis (width): ");
         double minorAxis = readPositiveDouble(scanner, "Enter minor axis (height): ");
@@ -62,7 +58,6 @@ public class GraphicsEditorDemo {
         System.out.println("Ellipse added successfully!");
     }
 
-    // Чтение положительного целого числа
     private static int readPositiveInteger(Scanner scanner, String message) {
         int value;
         do {
@@ -80,7 +75,6 @@ public class GraphicsEditorDemo {
         return value;
     }
 
-    // Чтение положительного вещественного числа
     private static double readPositiveDouble(Scanner scanner, String message) {
         double value;
         do {
@@ -97,4 +91,5 @@ public class GraphicsEditorDemo {
         } while (value <= 0);
         return value;
     }
+
 }
