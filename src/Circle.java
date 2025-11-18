@@ -2,25 +2,26 @@ public class Circle extends Shape {
 
     private double radius;
 
-    // 2. CONSTRUCTOR:
-    // This method is called when we write 'new Circle(10.0)'
-    // It forces us to provide the radius when creating a Circle instance.
     public Circle(double radius) {
+        if (radius <= 0) {
+            throw new IllegalArgumentException("Radius must be positive.");
+        }
         this.radius = radius;
     }
 
     @Override
     public String getName() {
-        return "Коло";
+        return "Circle";
     }
-
-    // 3. IMPLEMENTATION OF ABSTRACT METHOD
 
     @Override
     public double getArea() {
-        // Circle area formula: PI * r^2
-
         return Math.PI * this.radius * this.radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Circle with radius = " + this.radius);
     }
 
     public double getRadius() {
@@ -28,12 +29,10 @@ public class Circle extends Shape {
     }
 
     public void setRadius(double newRadius) {
-
         if (newRadius > 0) {
             this.radius = newRadius;
         } else {
-            System.out.println("Помилка: Радіус не може бути нульовим або негативним.");
+            System.out.println("Error: Radius cannot be zero or negative.");
         }
-
     }
 }

@@ -1,7 +1,6 @@
 public class ShapePrinter {
 
     public void printShapeName(Shape shape) {
-
-        System.out.println("Назва цієї фігури: " + shape.getName());
+        System.out.println("The name of this shape is: " + shape.getName());
     }
 }

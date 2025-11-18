@@ -1,21 +1,29 @@
+import java.util.Random;
+
 public abstract class Shape implements IDrawable {
 
     private String color;
 
+    public Shape() {
+        this.color = generateRandomColor(); // Присваиваем случайный цвет при создании
+    }
+
     public abstract String getName();
+
+    public abstract double getArea();
 
     public String getColor() {
         return color;
     }
+
     public void setColor(String color) {
         this.color = color;
     }
-    @Override
-    public void draw() {}
 
-    public abstract double getArea();
-
+    // Метод генерации случайного цвета
+    private String generateRandomColor() {
+        String[] colors = {"Red", "Blue", "Green", "Yellow", "Purple", "Orange"};
+        Random random = new Random();
+        return colors[random.nextInt(colors.length)];
+    }
 }
-
-
-
