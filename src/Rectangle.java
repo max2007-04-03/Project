@@ -3,7 +3,6 @@ public class Rectangle extends Shape {
     private double width;
     private double height;
 
-    // Конструктор с проверкой входных данных
     public Rectangle(double width, double height) {
         if (width <= 0 || height <= 0) {
             throw new IllegalArgumentException("Width and height must be positive values.");
@@ -19,7 +18,7 @@ public class Rectangle extends Shape {
 
     @Override
     public double getArea() {
-        return this.width * this.height; // Формула площади прямоугольника
+        return this.width * this.height; 
     }
 
     @Override
@@ -27,12 +26,10 @@ public class Rectangle extends Shape {
         System.out.println("Drawing a Rectangle with width = " + this.width + " and height = " + this.height);
     }
 
-    // Геттер для ширины
     public double getWidth() {
         return width;
     }
 
-    // Сеттер для ширины
     public void setWidth(double width) {
         if (width > 0) {
             this.width = width;
@@ -41,12 +38,10 @@ public class Rectangle extends Shape {
         }
     }
 
-    // Геттер для высоты
     public double getHeight() {
         return height;
     }
 
-    // Сеттер для высоты
     public void setHeight(double height) {
         if (height > 0) {
             this.height = height;
