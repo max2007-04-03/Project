@@ -1,7 +1,7 @@
 public class Ellipse extends Shape {
 
-    private double width;
-    private double height;
+    private final double width;
+    private final double height;
 
     public Ellipse(double width, double height) {
         if (width <= 0 || height <= 0) {
@@ -25,4 +25,5 @@ public class Ellipse extends Shape {
     public void draw() {
         System.out.println("Drawing an Ellipse with width = " + this.width + " and height = " + this.height);
     }
+
 }
