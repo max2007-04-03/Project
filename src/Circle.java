@@ -2,9 +2,9 @@ public class Circle extends Shape {
 
     private double radius;
 
-    // 2. ? КОНСТРУКТОР:
-    // Цей метод викликається, коли ми пишемо 'new Circle(10.0)'
-    // Він змушує нас надати радіус при створенні.
+    // 2. CONSTRUCTOR:
+    // This method is called when we write 'new Circle(10.0)'
+    // It forces us to provide the radius when creating a Circle instance.
     public Circle(double radius) {
         this.radius = radius;
     }
@@ -14,10 +14,12 @@ public class Circle extends Shape {
         return "Коло";
     }
 
-    // 3. ? РЕАЛІЗАЦІЯ АБСТРАКТНОГО МЕТОДУ
+    // 3. IMPLEMENTATION OF ABSTRACT METHOD
+
     @Override
     public double getArea() {
-        // Формула площі кола: PI * r^2
+        // Circle area formula: PI * r^2
+
         return Math.PI * this.radius * this.radius;
     }
 

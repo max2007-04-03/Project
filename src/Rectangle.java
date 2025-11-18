@@ -1,10 +1,11 @@
 public class Rectangle extends Shape {
-    // 1. ? ІНКАПСУЛЯЦІЯ:
-    // Приватні поля
+    // 1. ENCAPSULATION:
+    // Private fields
     private double width;
     private double height;
 
-    // 2. ? КОНСТРУКТОР:
+    // 2. CONSTRUCTOR:
+
     public Rectangle(double width, double height) {
         this.width = width;
         this.height = height;
@@ -15,7 +16,7 @@ public class Rectangle extends Shape {
         return "Прямокутник";
     }
 
-    // 3. ? РЕАЛІЗАЦІЯ (своя, унікальна!)
+    // 3. UNIQUE IMPLEMENTATION
     @Override
     public double getArea() {
         // Формула площі прямокутника: ширина * висота
