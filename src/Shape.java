@@ -5,7 +5,7 @@ public abstract class Shape implements IDrawable {
     private String color;
 
     public Shape() {
-        this.color = generateRandomColor(); // Присваиваем случайный цвет при создании
+        this.color = generateRandomColor();
     }
 
     public abstract String getName();
@@ -20,7 +20,7 @@ public abstract class Shape implements IDrawable {
         this.color = color;
     }
 
-    // Метод генерации случайного цвета
+    
     private String generateRandomColor() {
         String[] colors = {"Red", "Blue", "Green", "Yellow", "Purple", "Orange"};
         Random random = new Random();
